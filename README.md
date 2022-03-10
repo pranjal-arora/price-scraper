@@ -1,2 +1,2 @@
-# Amazon Items Price Checker 
+# Amazon Items Price Scraper 
 ## Node.js API Server
