@@ -1,5 +1,5 @@
 {
-  "name": "amazon-price-checker-server",
+  "name": "amazon-price-scraper-server",
   "version": "2.0.0",
   "description": "Nodejs server for Amazon price scraper",
   "main": "server.js",
@@ -9,19 +9,11 @@
     "reinstall": "rm -rf node_modules && npm i",
     "security:fix": "npm audit fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/benAkehurst/amazon-price-checker.git"
-  },
-  "author": "Ben Akehurst",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/benAkehurst/nodejs-api-server/issues"
-  },
+  "author": "Pranjal Arora",
+  "license": "MIT",
   "engines": {
     "node": "10.x"
   },
-  "homepage": "https://github.com/benAkehurst/amazon-price-checker/tree/master/server#amazon-price-checker-nodejs-api-server",
   "devDependencies": {
     "nodemon": "^1.18.10"
   },

@@ -5,7 +5,7 @@ module.exports = {
     description: "Services for APC",
     version: "1.0.0",
     contact: {
-      name: "Ben Akehurst",
+      name: "Pranjal Arora",
     },
   },
 };
