@@ -1,4 +1,4 @@
 # Amazon Items Price Scraper 
-## Node.js API Server, puppeteer and cheerio.js 
-## Heroku CLI 
-###  enter the prices in the array, get prices from AMAZON
+- Enter the product category in the array, get prices scrape from amazon.in
+- Requiremnts:- Node.js, puppeteer, cheerio.js, heroku cli for deployment
+
