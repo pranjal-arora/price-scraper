@@ -1,4 +1,3 @@
-// Server Dependencies
 const express = require('express');
 const http = require('http');
 const mongoose = require('mongoose');
@@ -9,18 +8,17 @@ const helmet = require('helmet');
 const swaggerUI = require('swagger-ui-express');
 const docs = require('./docs');
 
-// Models Imports
 const User = require('./api/models/user.model');
 const SingleItem = require('./api/models/singleItem.model');
 const Access = require('./api/models/access.model');
 const Code = require('./api/models/code.model');
 
-// Init Express
+// initializing express server
 const app = express();
 require('dotenv').config();
 const server = http.createServer(app);
 
-// DB Connection
+//connecting mongodb
 mongoose
   .connect(
     process.env.IS_DEV ? process.env.DB_HOST : process.env.DB_HOST_PROD,
@@ -46,7 +44,7 @@ app.use(morgan('combined', { stream: winston.stream }));
 app.use(helmet());
 app.set('port', process.env.PORT);
 
-// Cors Config
+
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -61,10 +59,10 @@ app.use((req, res, next) => {
 });
 app.use(cors());
 
-// SwaggerUI Setup
+
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(docs));
 
-// Routes Definitions
+
 const authRoutes = require('./api/routes/auth.routes');
 const scraperRoutes = require('./api/routes/scraper.routes');
 const userRoutes = require('./api/routes/user.routes');
